@@ -1,4 +1,11 @@
-function PokemonCard({ pokemon }) {
+interface PokemonCard {
+	pokemon: {
+		imgSrc?: string;
+		name: string;
+	};
+}
+
+function PokemonCard({ pokemon }: PokemonCard) {
 	return (
 		<div>
 			<figure>

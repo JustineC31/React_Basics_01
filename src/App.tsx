@@ -1,4 +1,5 @@
 import PokemonCard from "./components/PokemonCard.tsx";
+import "./App.css";
 
 const pokemonList = [
 	{
