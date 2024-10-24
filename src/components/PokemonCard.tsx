@@ -15,7 +15,6 @@ function PokemonCard({ pokemon }: PokemonCard) {
 					<p>???</p>
 				)}
 			</figure>
-			<figcaption>{pokemon.name}</figcaption>
 		</div>
 	);
 }
