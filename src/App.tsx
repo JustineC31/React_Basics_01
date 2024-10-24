@@ -29,17 +29,23 @@ function App() {
 		},
 	];
 	const [pokemonIndex, setPokemonIndex] = useState(0);
+	const hasPrevious = pokemonIndex > 0;
+	const hasNext = pokemonIndex < pokemonList.length - 1;
 
 	return (
 		<div>
 			<PokemonCard pokemon={pokemonList[pokemonIndex]} />
 
-			<button type="button" onClick={() => setPokemonIndex(pokemonIndex - 1)}>
-				Précédent
-			</button>
-			<button type="button" onClick={() => setPokemonIndex(pokemonIndex + 1)}>
-				Suivant
-			</button>
+			{hasPrevious && (
+				<button type="button" onClick={() => setPokemonIndex(pokemonIndex - 1)}>
+					Précédent
+				</button>
+			)}
+			{hasNext && (
+				<button type="button" onClick={() => setPokemonIndex(pokemonIndex + 1)}>
+					Suivant
+				</button>
+			)}
 		</div>
 	);
 }
